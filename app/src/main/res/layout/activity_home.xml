@@ -11,13 +11,18 @@
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray"
         android:padding="24dp"
-        app:constraintEnd_toEndOf="parent"
-        app:constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:padding="20dp"
             app:cardCornerRadius="8dp">
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
 
         </androidx.cardview.widget.CardView>
     </LinearLayout>
