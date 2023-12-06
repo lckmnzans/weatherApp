@@ -9,8 +9,8 @@ interface ApiService {
     @GET("weather")
     fun getLocWeather(
         @Query("q") q: String? = null,
-        @Query("lat") lat: Double,
-        @Query("lon") lon: Double,
+        @Query("lat") lat: Double? = null,
+        @Query("lon") lon: Double? = null,
         @Query("appid") appid: String = "ce7dc25e783c8df0b76a082dcc47afc9"
     ): Call<LocWeatherResponse>
 }
