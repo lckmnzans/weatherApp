@@ -23,7 +23,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun getResponseWeather() {
-        val client = ApiConfig.getApiService().getLocWeather(-7.7827885, 110.3650402)
+        val client = ApiConfig.getApiService().getLocWeather(lat = -7.7827885, lon = 110.3650402)
         client.enqueue(object: Callback<LocWeatherResponse> {
             override fun onResponse(
                 call: Call<LocWeatherResponse>,
