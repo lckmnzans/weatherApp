@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.OverviewFragment">
+
+    <LinearLayout
+        android:padding="22dp"
+        android:background="@drawable/square_frame"
+        android:backgroundTint="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Semarang"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/tv_day"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Today, Dec 09"
+            android:layout_marginTop="6dp"
+            android:textSize="16sp"/>
+        <ImageView
+            app:tint="@android:color/darker_gray"
+            android:id="@+id/iv_day"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            tools:src="@android:drawable/ic_menu_gallery"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_weather_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27"
+                android:textSize="48sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="0"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/tv_weather_temp"
+                app:layout_constraintTop_toTopOf="@id/tv_weather_temp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/tv_weather_cond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rainy"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</FrameLayout>
